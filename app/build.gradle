@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "kg.onoi.smartid"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(path: ':smart_sdk')
+    implementation libs.android.values()
+    implementation libs.kotlin.values()
+    implementation libs.multidex
+    implementation libs.crashlytics
+
+
+}
+
+apply plugin: 'com.google.gms.google-services'

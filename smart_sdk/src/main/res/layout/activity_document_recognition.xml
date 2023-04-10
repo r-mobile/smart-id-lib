@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <kg.onoi.smart_sdk.custom_view.CustomToolbar
+        android:id="@+id/cv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SurfaceView
+        android:id="@+id/documentView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/cv_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_draw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/cv_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_toolbar">
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rl_draw"
+        app:layout_constraintStart_toStartOf="@+id/rl_draw"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#90000000"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/set_passport_to_frame"
+        android:textColor="@color/material_white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toTopOf="@+id/fl_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_frame">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fl_frame"
+        app:layout_constraintTop_toTopOf="@+id/fl_frame">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_frame"
+        app:layout_constraintEnd_toStartOf="@+id/fl_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fl_frame">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

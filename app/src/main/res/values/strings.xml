@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartId</string>
+    <string name="registration">Регистрация</string>
+    <string name="session_id">SESSION_ID</string>
+</resources>

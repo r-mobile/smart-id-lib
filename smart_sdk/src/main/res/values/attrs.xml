@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatedEditText">
+        <attr name="android:inputType" />
+        <attr name="android:textAllCaps" />
+        <attr name="title" format="reference|string" />
+        <attr name="error" format="reference|string" />
+        <attr name="needFocus" format="boolean" />
+        <attr name="counterLength" format="integer"/>
+        <attr name="bottom_hint" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="IconizedItem">
+        <attr name="android:text" />
+        <attr name="android:drawable" />
+    </declare-styleable>
+
+    <declare-styleable name="PassportCardView">
+        <attr name="android:text" />
+        <attr name="android:drawable" />
+        <attr name="isActive" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

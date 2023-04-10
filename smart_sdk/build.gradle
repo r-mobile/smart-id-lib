@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'digital.wup.android-maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName libs_version
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        all {
+            buildConfigField("String", "LICENCE_URL", '"http://www.onoi.kg/cloud-offer/"')
+        }
+        release {
+            useProguard false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    publishing {
+        publications {
+            mavenAar(MavenPublication) {
+                groupId = ''
+                artifactId = ''
+                version = "$libs_version"
+                from components.android
+            }
+        }
+    }
+
+    bintray {
+        user = ''
+        key = ''
+        pkg {
+            repo = ''
+            name = ''
+            userOrg = ''
+            licenses = ['Apache-2.0']
+            vcsUrl = 'https://gitlab.com/'
+            version {
+                name = "$libs_version"
+                released  = new Date()
+            }
+        }
+        publications = ['mavenAar']
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation files('libs/jniSmartIdEngineJar.jar')
+//    implementation files('libs/native-libs.jar')
+
+    implementation libs.kotlin.values()
+    implementation libs.parcelerApi
+    implementation libs.lifecycle.values()
+    implementation libs.android.values()
+    implementation libs.retrofit.values()
+    implementation libs.coroutines.values()
+    implementation libs.rx.values()
+    implementation libs.gvision
+    implementation libs.coroutinesAdapter
+    implementation libs.pinview
+    implementation libs.rxpermissions
+    implementation libs.fotoapparat
+
+    kapt libs.kapts.values()
+}
+

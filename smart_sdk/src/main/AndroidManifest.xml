@@ -1,0 +1,217 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kg.onoi.smart_sdk">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+
+    <application android:usesCleartextTraffic="true">
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.registration_by_phone.RegistrationPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.registration_by_phone.RegistrationSmsConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.registration_steps.RegistrationStepsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.face_detection.RegistrationFaceDetectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.face_detection.AuthFaceDetectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.document_recognition.DocumentRecognitionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.photos.PassportFrontPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.photos.PassportBackPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.photos.SelfiePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.photos.SelfieWithPassportPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.passport_info.PassportInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.registration_complete.RegistrationStatusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.moderation.ModerationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.success_registration.SuccessRegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.internal_camera.InternalCameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.auth_by_inn.MainInnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.auth_by_inn.EmployeeInnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.pin.MainPincodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.pin.EmployeePincodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.close.CloseSessionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name="kg.onoi.smart_sdk.ui.registration_confirmation.RegistrationConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.auth_by_phone.AuthPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.auth_by_phone.AuthSmsConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.passport_tutorial.PassportTutorialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.secret_word.registration.RegistrationSecretWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.secret_word.auth.AuthSecretWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.video_moderation.VideoModerationInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.video_moderation.VideoCallRequestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.video_moderation.VideoCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SmartAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>
+

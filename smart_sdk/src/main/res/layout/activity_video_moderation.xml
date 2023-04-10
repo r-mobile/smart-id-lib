@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp">
+
+    <kg.onoi.smart_sdk.custom_view.CustomToolbar
+        android:id="@+id/cv_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_toolbar" />
+
+    <TextView
+        style="@style/TitleTextView"
+        android:id="@+id/tv_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="Для подтверждения вашей личности необходимо связаться с вами по видеосвязи"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_toolbar" />
+
+    <Button
+        android:id="@+id/btn_call_now"
+        style="@style/Button.Normal"
+        android:layout_width="0dp"
+        android:text="Видеозвонок сейчас"
+        app:layout_constraintBottom_toTopOf="@+id/btn_later"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_later"
+        style="@style/Button.Normal.Gray"
+        android:layout_width="0dp"
+        android:text="Позвонить позже"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_work_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:textColor="#757575"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_operator_will_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon"
+        tools:text="Видеозвонок можно совершать\nпн-пт с 10.00 до 17.30" />
+
+    <TextView
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/tv_operator_will_contact"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="Оператор сам свяжеться с вами в ближайшее время"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_call_now"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

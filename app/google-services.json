@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "406745655704",
+    "firebase_url": "https://smart-id-companion.firebaseio.com",
+    "project_id": "smart-id-companion",
+    "storage_bucket": "smart-id-companion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406745655704:android:f5405fb0633a390003e3ed",
+        "android_client_info": {
+          "package_name": "kg.onoi.smartid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406745655704-mc29j2ju0vob8ru43p7d2tjimp5fuvof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoT-hX6imypsncY2frqiE_ByYUDc5_nys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406745655704-mc29j2ju0vob8ru43p7d2tjimp5fuvof.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
