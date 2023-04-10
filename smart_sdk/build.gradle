@@ -2,8 +2,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'digital.wup.android-maven-publish'
-apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 29
@@ -37,34 +35,6 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
-
-    publishing {
-        publications {
-            mavenAar(MavenPublication) {
-                groupId = ''
-                artifactId = ''
-                version = "$libs_version"
-                from components.android
-            }
-        }
-    }
-
-    bintray {
-        user = ''
-        key = ''
-        pkg {
-            repo = ''
-            name = ''
-            userOrg = ''
-            licenses = ['Apache-2.0']
-            vcsUrl = 'https://gitlab.com/'
-            version {
-                name = "$libs_version"
-                released  = new Date()
-            }
-        }
-        publications = ['mavenAar']
     }
 
 }
