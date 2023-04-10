@@ -62,7 +62,7 @@ open class OverlayView : View {
 
         mPath.reset()
 
-        mPath.addOval(rect, Path.Direction.CW)
+        mPath.addOval(rect!!, Path.Direction.CW)
         mPath.fillType = Path.FillType.INVERSE_EVEN_ODD
 
         canvas.drawOval(rect!!, mTransparentPaint)

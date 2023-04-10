@@ -65,6 +65,7 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
+                from components.release
                 groupId = 'kg.smartid'
                 artifactId = 'auth'
                 version = '1.0.0'

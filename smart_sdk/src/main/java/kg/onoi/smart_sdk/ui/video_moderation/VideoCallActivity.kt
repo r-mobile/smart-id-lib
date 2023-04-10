@@ -23,7 +23,7 @@ class VideoCallActivity :
         isAllowBackAndHome = true
         setupViews()
         subscribeToLiveData()
-        wv_web.loadUrl(intent.getStringExtra(String::class.java.canonicalName))
+        wv_web.loadUrl(intent.getStringExtra(String::class.java.canonicalName)?:"")
         requestStatus(0)
     }
 
@@ -96,7 +96,7 @@ class VideoCallActivity :
 
     class AppWebViewClient : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-            view?.loadUrl(url)
+            view?.loadUrl(url?:"")
             return true
         }
     }

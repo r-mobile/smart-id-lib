@@ -45,7 +45,7 @@ abstract class BasePhotoActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.user = user
-        viewModel.setTargetPhotoType(PhotoType.valueOf(intent.getStringExtra(Constant.Extra.PHOTO_TYPE)))
+        viewModel.setTargetPhotoType(PhotoType.valueOf(intent.getStringExtra(Constant.Extra.PHOTO_TYPE)?:""))
         setupViews()
         subscribeToLiveData()
     }

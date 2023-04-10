@@ -11,7 +11,7 @@ import java.security.AuthProvider
 class AuthVM(private val repo: AuthRepo) : BaseViewModel() {
 
     fun sendConfirmSms(phone: String) {
-        val formattedNumber = phone.removeWhitespaces().removeRange(0, 1)
+        val formattedNumber = phone?.removeWhitespaces()?.removeRange(0, 1) ?: ""
         runWithProgress {
             val response = repo.authByPhone(formattedNumber)
             event.value = when (response?.result) {

@@ -48,7 +48,7 @@ class RetrofitWrapper(private val host: String, private val type: Type) {
                         .addHeader("apiKey", SdkConfig.apiKey)
                         .addHeader("deviceId", SdkConfig.deviceId)
                         .addHeader("language", SdkConfig.language)
-                        .addHeader("version", "android:${BuildConfig.VERSION_NAME}")
+                        //.addHeader("version", "android:${BuildConfig.VERSION_NAME}")
                         .addHeader("serviceType", type.name)
                         .build()
                 )

@@ -160,7 +160,7 @@ abstract class BasePinActivity :
         finish()
     }
 
-    fun getInn(): String = intent.getStringExtra(ExtrasName.INN)
+    fun getInn(): String = intent.getStringExtra(ExtrasName.INN) ?: ""
 
     fun getOrgInn(): String? = intent.getStringExtra(ExtrasName.ORG_INN)
 

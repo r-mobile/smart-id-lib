@@ -15,7 +15,7 @@ class CloseSessionActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         subscribeLiveData()
-        viewModel.closeSession(getSessionId())
+        viewModel.closeSession(getSessionId() ?: "")
     }
 
     private fun subscribeLiveData() {

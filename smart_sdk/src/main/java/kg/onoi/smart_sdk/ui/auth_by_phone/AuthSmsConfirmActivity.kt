@@ -38,7 +38,7 @@ class AuthSmsConfirmActivity :
         et_pin.textChanges().subscribe { btn_next.isEnabled = it.length >= 4 }
         btn_next.setOnClickListener {
             viewModel.checkSmsCode(
-                intent.getStringExtra(String::class.java.canonicalName),
+                intent.getStringExtra(String::class.java.canonicalName) ?: "",
                 et_pin.getString()
             )
         }
@@ -98,7 +98,7 @@ class AuthSmsConfirmActivity :
     }
 
     private fun onResendSmsClick() {
-        viewModel.sendConfirmSms(intent.getStringExtra(String::class.java.canonicalName))
+        viewModel.sendConfirmSms(intent.getStringExtra(String::class.java.canonicalName) ?: "")
     }
 
     override fun onBackPressed() {

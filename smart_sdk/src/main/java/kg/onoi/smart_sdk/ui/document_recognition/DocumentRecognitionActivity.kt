@@ -58,7 +58,7 @@ class DocumentRecognitionActivity :
 
     private fun getTargetDocumentSide(): ResultRecognitionWrapper.DocumentSide {
         return ResultRecognitionWrapper.DocumentSide.valueOf(
-            intent.getStringExtra(ResultRecognitionWrapper.DocumentSide::class.java.canonicalName)
+            intent.getStringExtra(ResultRecognitionWrapper.DocumentSide::class.java.canonicalName)?:""
         )
     }
 
