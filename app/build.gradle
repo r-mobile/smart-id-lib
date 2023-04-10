@@ -30,7 +30,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(path: ':smart_sdk')
+//    implementation project(path: ':smart_sdk')
+    implementation 'com.github.roman-a-marchenko:smart-id-lib:1.0.1'
+
     implementation libs.android.values()
     implementation libs.kotlin.values()
     implementation libs.multidex

@@ -1,13 +1,11 @@
 package kg.onoi.smartid
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import kg.onoi.smart_sdk.SmartID
-import kg.onoi.smart_sdk.extensions.gone
-import kg.onoi.smart_sdk.ui.video_moderation.VideoCallRequestActivity
-import kg.onoi.smart_sdk.ui.video_moderation.VideoModerationInfoActivity
 import kg.onoi.smart_sdk.utils.Config
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -53,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 tv_auth_session.text = ""
             }
         }
-        btn_blinking.gone()
+        btn_blinking.isVisible = false
     }
 
     private fun toast(message: String) {
