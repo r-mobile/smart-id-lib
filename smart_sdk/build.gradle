@@ -2,14 +2,15 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
         versionName libs_version
 
@@ -60,3 +61,14 @@ dependencies {
     kapt libs.kapts.values()
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'kg.smartid'
+                artifactId = 'auth'
+                version = '1.0.0'
+            }
+        }
+    }
+}
