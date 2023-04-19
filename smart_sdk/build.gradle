@@ -54,7 +54,7 @@ dependencies {
     implementation libs.rx.values()
     implementation libs.gvision
     implementation libs.coroutinesAdapter
-    implementation libs.pinview
+    //implementation libs.pinview
     implementation libs.rxpermissions
     implementation libs.fotoapparat
 
@@ -68,7 +68,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'kg.smartid'
                 artifactId = 'auth'
-                version = '1.0.1'
+                version = '1.0.2'
             }
         }
     }
